@@ -68,7 +68,7 @@ class RemoteFeedLoaderTests: XCTestCase {
             client.complete(withStatusCode: 200, data: emptyListJSON)
         }
     }
-        
+
     func test_load_deliversItemsOn200HTTPResponseWithJSONItems() {
         let (sut, client) = makeSUT()
 
@@ -129,7 +129,7 @@ class RemoteFeedLoaderTests: XCTestCase {
         }
         return (item, json)
     }
-    
+
     private func makeItemsJSON(_ items: [[String: Any]]) -> Data {
         let json = ["items": items]
         return try! JSONSerialization.data(withJSONObject: json)
