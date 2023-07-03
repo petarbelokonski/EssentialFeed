@@ -26,6 +26,7 @@
 		909CEA2E294F42E600D93B87 /* FeedImagesMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909CEA2D294F42E600D93B87 /* FeedImagesMapper.swift */; };
 		909CEA3229506CCF00D93B87 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909CEA3129506CCF00D93B87 /* URLSessionHTTPClientTests.swift */; };
 		90DFB439294CE3DD007EA08C /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DFB438294CE3DD007EA08C /* RemoteFeedLoader.swift */; };
+		90F8A5B12A52BB20002791F9 /* LoadFeedFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F8A5B02A52BB20002791F9 /* LoadFeedFromCacheUseCaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		909CEA2D294F42E600D93B87 /* FeedImagesMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImagesMapper.swift; sourceTree = "<group>"; };
 		909CEA3129506CCF00D93B87 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		90DFB438294CE3DD007EA08C /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
+		90F8A5B02A52BB20002791F9 /* LoadFeedFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				9062127329D6E15A006116C8 /* CacheFeedUseCaseTests.swift */,
+				90F8A5B02A52BB20002791F9 /* LoadFeedFromCacheUseCaseTests.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				909CEA3229506CCF00D93B87 /* URLSessionHTTPClientTests.swift in Sources */,
 				901C326A29AA2B050010083B /* XCTTestCase+MemoryLeakTracking.swift in Sources */,
 				9062127429D6E15A006116C8 /* CacheFeedUseCaseTests.swift in Sources */,
+				90F8A5B12A52BB20002791F9 /* LoadFeedFromCacheUseCaseTests.swift in Sources */,
 				9062127129D6D732006116C8 /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
