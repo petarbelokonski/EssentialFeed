@@ -55,21 +55,22 @@ final class CodableFeedStoreTests: XCTestCase, FailableFeedStoreSpecs {
 
         try! "invalid data".write(to: storeURL, atomically: false, encoding: .utf8)
 
-        expect(sut, toRetrieve: .failure(error: anyNSError()))
+        assertThatRetrieveDeliversFailureOnRetrievalError
     }
 
     func test_retrieve_hasNoSideEffectsOnFailure() {
-        let sut = makeSUT()
+        let storeURL = testSpecificStoreURL
+        let sut = makeSUT(storeURL: storeURL)
 
-        assertThatRetrieveHasNoSideEffectsOnNonEmptyCache(on: sut)
+        try! "invalid data".write(to: storeURL, atomically: false, encoding: .utf8)
+
+        assertThatRetrieveHasNoSideEffectsOnFailure(on: sut)
     }
 
     func test_insert_deliversNoErrorOnEmptyCache() {
         let sut = makeSUT()
 
-        let insertionError = insert((uniqueImageFeed().local, Date()), to: sut)
-
-        XCTAssertNil(insertionError, "Expected to insert cache successfully")
+        assertThatInsertDeliversNoErrorOnEmptyCache(on: sut)
     }
 
     func test_insert_deliversNoErrorOnNonEmptyCache() {
