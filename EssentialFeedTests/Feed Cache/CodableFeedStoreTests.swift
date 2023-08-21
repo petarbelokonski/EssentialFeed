@@ -8,8 +8,7 @@
 import XCTest
 import EssentialFeed
 
-final class CodableFeedStoreTests: XCTestCase {
-
+final class CodableFeedStoreTests: XCTestCase, FailableFeedStoreSpecs {
     override func setUp() {
         super.setUp()
 
@@ -22,13 +21,13 @@ final class CodableFeedStoreTests: XCTestCase {
         undoStoreSideEffects()
     }
 
-    func test_retrieve_deliversEmptyOnEmptycache() {
+    func test_retrieve_deliversEmptyOnEmptyCache() {
         let sut = makeSUT()
 
         expect(sut, toRetrieve: .empty)
     }
 
-    func test_retrieve_hasNoSideEffectsOnEmptycache() {
+    func test_retrieve_hasNoSideEffectsOnEmptyCache() {
         let sut = makeSUT()
 
         expect(sut, toRetrieveTwice: .empty)
