@@ -41,12 +41,8 @@ final class CodableFeedStoreTests: XCTestCase, FailableFeedStoreSpecs {
 
     func test_retrieve_hasNoSideEffectsOnNonEmptyCache() {
         let sut = makeSUT()
-        let feed = uniqueImageFeed().local
-        let timestamp = Date()
 
-        insert((feed, timestamp), to: sut)
-
-        expect(sut, toRetrieveTwice: .found(feed: feed, timestamp: timestamp))
+        assertThatRetrieveHasNoSideEffectsOnNonEmptyCache(on: sut)
     }
 
     func test_retrieve_deliversFailureOnRetrievalError() {
@@ -112,12 +108,9 @@ final class CodableFeedStoreTests: XCTestCase, FailableFeedStoreSpecs {
     }
 
     func test_delete_deliversNoErrorOnNonEmptyCache() {
-         let sut = makeSUT()
-         insert((uniqueImageFeed().local, Date()), to: sut)
+        let sut = makeSUT()
 
-         let deletionError = deleteCache(from: sut)
-
-         XCTAssertNil(deletionError, "Expected non-empty cache deletion to succeed")
+        assertThatDeleteDeliversNoErrorOnNonEmptyCache(on: sut)
      }
 
      func test_delete_emptiesPreviouslyInsertedCache() {
@@ -130,16 +123,14 @@ final class CodableFeedStoreTests: XCTestCase, FailableFeedStoreSpecs {
         let noDeletePermissionURL = cachesDirectory
         let sut = makeSUT(storeURL: noDeletePermissionURL)
 
-        let deletionError = deleteCache(from: sut)
-        XCTAssertNotNil(deletionError, "Expected cache deletion to fail")
+        assertThatDeleteDeliversErrorOnDeletionError(on: sut)
     }
 
     func test_delete_hasNoSideEffectsOnDeletionError() {
         let noDeletePermissionURL = cachesDirectory
         let sut = makeSUT(storeURL: noDeletePermissionURL)
 
-        deleteCache(from: sut)
-        expect(sut, toRetrieve: .empty)
+        assertThatDeleteHasNoSideEffectsOnDeletionError(on: sut)
     }
 
     func test_storeSideEffects_runSerially() {
