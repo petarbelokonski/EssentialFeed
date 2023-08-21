@@ -176,7 +176,7 @@ final class CodableFeedStoreTests: XCTestCase {
             deletionError = receivedDeletionError
             exp.fulfill()
         }
-        wait(for: [exp], timeout: 3.0)
+        wait(for: [exp], timeout: 1.0)
         return deletionError
     }
 
@@ -207,7 +207,7 @@ final class CodableFeedStoreTests: XCTestCase {
     }
 
     private var cachesDirectory: URL {
-        FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
+        FileManager.default.urls(for: .cachesDirectory, in: .systemDomainMask).first!
     }
 
     private var testSpecificStoreURL: URL {
