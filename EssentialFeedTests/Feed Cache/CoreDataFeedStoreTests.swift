@@ -8,22 +8,6 @@
 import XCTest
 import EssentialFeed
 
-final class CoreDataFeedStore: FeedStore {
-    public init() {}
-
-    public func retrieve(completion: @escaping RetrievalCompletion) {
-        completion(.empty)
-    }
-
-    public func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion) {
-
-    }
-
-    public func deleteCacheFeed(completion: @escaping DeletionCompletion) {
-
-    }
-}
-
 final class CoreDataFeedStoreTests: XCTestCase, FailableFeedStoreSpecs {
 
     func test_retrieve_deliversFailureOnRetrievalError() {
