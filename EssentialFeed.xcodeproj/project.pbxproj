@@ -21,6 +21,7 @@
 		9029D4ED2AA778E00033FC5D /* FeedCacheTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F8A5B72A533A17002791F9 /* FeedCacheTestHelpers.swift */; };
 		9029D4EE2AA778E20033FC5D /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F8A5B92A533A7E002791F9 /* SharedTestHelpers.swift */; };
 		9039A5652AA8701400396BCE /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9039A55D2AA8701400396BCE /* EssentialFeediOS.framework */; };
+		9039A5742AA87C3D00396BCE /* FeedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9039A5732AA87C3D00396BCE /* FeedViewControllerTests.swift */; };
 		904B7381294A04DD00FAE86D /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 904B7378294A04DD00FAE86D /* EssentialFeed.framework */; };
 		904B7387294A04DD00FAE86D /* EssentialFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 904B737B294A04DD00FAE86D /* EssentialFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		904B739A294A3FBE00FAE86D /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904B7398294A3FBE00FAE86D /* FeedLoader.swift */; };
@@ -98,6 +99,7 @@
 		9039A55D2AA8701400396BCE /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9039A5642AA8701400396BCE /* EssentialFeediOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeediOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9039A5722AA870AC00396BCE /* EssentialFeediOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeediOS.xctestplan; sourceTree = "<group>"; };
+		9039A5732AA87C3D00396BCE /* FeedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerTests.swift; sourceTree = "<group>"; };
 		904B7378294A04DD00FAE86D /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		904B737B294A04DD00FAE86D /* EssentialFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EssentialFeed.h; sourceTree = "<group>"; };
 		904B7380294A04DD00FAE86D /* EssentialFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				9039A5722AA870AC00396BCE /* EssentialFeediOS.xctestplan */,
+				9039A5732AA87C3D00396BCE /* FeedViewControllerTests.swift */,
 			);
 			path = EssentialFeediOSTests;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 					};
 					9039A5632AA8701400396BCE = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 					904B7377294A04DD00FAE86D = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -627,6 +631,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9039A5742AA87C3D00396BCE /* FeedViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -838,6 +843,7 @@
 		9039A56E2AA8701500396BCE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JA73KXA2KR;
@@ -847,6 +853,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.petarbelokonski.EssentialFeediOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -855,6 +862,7 @@
 		9039A56F2AA8701500396BCE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JA73KXA2KR;
