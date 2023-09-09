@@ -20,6 +20,8 @@
 		901EE5C02AAC518F005B2BD2 /* UIRefreshControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901EE5BF2AAC518F005B2BD2 /* UIRefreshControl+TestHelpers.swift */; };
 		901EE5C22AAC51BC005B2BD2 /* UIControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901EE5C12AAC51BC005B2BD2 /* UIControl+TestHelpers.swift */; };
 		901EE5C42AAC551B005B2BD2 /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901EE5C32AAC551B005B2BD2 /* FeedImageDataLoader.swift */; };
+		901EE5C92AAC55A1005B2BD2 /* FeedViewController+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901EE5C82AAC55A1005B2BD2 /* FeedViewController+TestHelpers.swift */; };
+		901EE5CB2AAC56E0005B2BD2 /* FeedImageCell+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901EE5CA2AAC56E0005B2BD2 /* FeedImageCell+TestHelpers.swift */; };
 		9029D4E42AA7729E0033FC5D /* EssentialFeedCacheIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9029D4E32AA7729D0033FC5D /* EssentialFeedCacheIntegrationTests.swift */; };
 		9029D4E52AA7729E0033FC5D /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 904B7378294A04DD00FAE86D /* EssentialFeed.framework */; };
 		9029D4EC2AA7738C0033FC5D /* XCTTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C326929AA2B050010083B /* XCTTestCase+MemoryLeakTracking.swift */; };
@@ -130,6 +132,8 @@
 		901EE5BF2AAC518F005B2BD2 /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		901EE5C12AAC51BC005B2BD2 /* UIControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		901EE5C32AAC551B005B2BD2 /* FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoader.swift; sourceTree = "<group>"; };
+		901EE5C82AAC55A1005B2BD2 /* FeedViewController+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewController+TestHelpers.swift"; sourceTree = "<group>"; };
+		901EE5CA2AAC56E0005B2BD2 /* FeedImageCell+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedImageCell+TestHelpers.swift"; sourceTree = "<group>"; };
 		9029D4E12AA7729D0033FC5D /* EssentialFeedCacheIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedCacheIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9029D4E32AA7729D0033FC5D /* EssentialFeedCacheIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedCacheIntegrationTests.swift; sourceTree = "<group>"; };
 		9029D4EB2AA773120033FC5D /* EssentialFeedCacheIntegrationTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeedCacheIntegrationTests.xctestplan; sourceTree = "<group>"; };
@@ -315,6 +319,8 @@
 				901EE5BD2AAC513E005B2BD2 /* UIButton+TestHelpers.swift */,
 				901EE5BF2AAC518F005B2BD2 /* UIRefreshControl+TestHelpers.swift */,
 				901EE5C12AAC51BC005B2BD2 /* UIControl+TestHelpers.swift */,
+				901EE5C82AAC55A1005B2BD2 /* FeedViewController+TestHelpers.swift */,
+				901EE5CA2AAC56E0005B2BD2 /* FeedImageCell+TestHelpers.swift */,
 			);
 			path = EssentialFeediOSTests;
 			sourceTree = "<group>";
@@ -723,8 +729,10 @@
 				901EE5C02AAC518F005B2BD2 /* UIRefreshControl+TestHelpers.swift in Sources */,
 				901EE5BE2AAC513E005B2BD2 /* UIButton+TestHelpers.swift in Sources */,
 				901EE5C22AAC51BC005B2BD2 /* UIControl+TestHelpers.swift in Sources */,
+				901EE5C92AAC55A1005B2BD2 /* FeedViewController+TestHelpers.swift in Sources */,
 				9039A5742AA87C3D00396BCE /* FeedViewControllerTests.swift in Sources */,
 				901EE5BC2AAC50DA005B2BD2 /* UIImage+TestHelpers.swift in Sources */,
+				901EE5CB2AAC56E0005B2BD2 /* FeedImageCell+TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
