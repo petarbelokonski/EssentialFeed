@@ -12,7 +12,7 @@ import EssentialApp
 final class FeedImageDataLoaderWithFallbackCompositeTests: XCTestCase {
 
     func test_load_deliversPrimaryDataOnPrimaryLoaderSuccess() {
-        let primaryData = Data("Primary data".utf8)
+        let primaryData = anyData()
         let fallbackData = Data("Fallback data".utf8)
 
         let sut = makeSUT(primaryResult: .success(primaryData), fallbackResult: .success(fallbackData))
@@ -21,7 +21,7 @@ final class FeedImageDataLoaderWithFallbackCompositeTests: XCTestCase {
     }
 
     func test_load_deliversFallbackDataOnPrimaryLoaderFailure() {
-        let fallbackData = Data("Fallback data".utf8)
+        let fallbackData = anyData()
 
         let sut = makeSUT(primaryResult: .failure(anyNSError()), fallbackResult: .success(fallbackData))
 
@@ -143,13 +143,5 @@ final class FeedImageDataLoaderWithFallbackCompositeTests: XCTestCase {
         func complete(with error: Error, at index: Int = 0) {
             messages[index].completion(.failure(error))
         }
-    }
-
-    private func anyNSError() -> NSError {
-        return NSError(domain: "any error", code: 0)
-    }
-
-    private func anyURL() -> URL {
-        return URL(string: "http://a-url.com")!
     }
 }
