@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90B6AEC42AC5D1D6006E9C19 /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B6AEC32AC5D1D6006E9C19 /* FeedImageDataLoaderWithFallbackComposite.swift */; };
 		90DEC2932AC566A200AEDE50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DEC2922AC566A200AEDE50 /* AppDelegate.swift */; };
 		90DEC2952AC566A200AEDE50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DEC2942AC566A200AEDE50 /* SceneDelegate.swift */; };
 		90DEC2972AC566A200AEDE50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DEC2962AC566A200AEDE50 /* ViewController.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		90B6AEC32AC5D1D6006E9C19 /* FeedImageDataLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 		90DEC28F2AC566A200AEDE50 /* EssentialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90DEC2922AC566A200AEDE50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90DEC2942AC566A200AEDE50 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				90DEC29D2AC566A400AEDE50 /* LaunchScreen.storyboard */,
 				90DEC2A02AC566A400AEDE50 /* Info.plist */,
 				90DEC2D12AC5917700AEDE50 /* FeedLoaderWithFallbackComposite.swift */,
+				90B6AEC32AC5D1D6006E9C19 /* FeedImageDataLoaderWithFallbackComposite.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				90DEC2932AC566A200AEDE50 /* AppDelegate.swift in Sources */,
 				90DEC2D22AC5917700AEDE50 /* FeedLoaderWithFallbackComposite.swift in Sources */,
 				90DEC2952AC566A200AEDE50 /* SceneDelegate.swift in Sources */,
+				90B6AEC42AC5D1D6006E9C19 /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
