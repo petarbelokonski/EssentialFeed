@@ -10,13 +10,22 @@ import EssentialFeed
 
 class FeedImageDataLoaderWithFallbackComposite: FeedImageDataLoader {
     private let primaryLoader: FeedImageDataLoader
+    private let fallbackLoader: FeedImageDataLoader
 
     init(primary: FeedImageDataLoader, fallback: FeedImageDataLoader) {
         primaryLoader = primary
+        fallbackLoader = fallback
     }
 
     func loadImageData(from url: URL, completion: @escaping (FeedImageDataLoader.Result) -> Void) -> EssentialFeed.FeedImageDataLoaderTask {
-        primaryLoader.loadImageData(from: url, completion: completion)
+        primaryLoader.loadImageData(from: url) { [weak self] result in
+            switch result {
+            case .success:
+                completion(result)
+            case .failure:
+                let _ = self?.fallbackLoader.loadImageData(from: url, completion: completion)
+            }
+        }
     }
 }
 
@@ -29,6 +38,14 @@ final class FeedImageDataLoaderWithFallbackCompositeTests: XCTestCase {
         let sut = makeSUT(primaryResult: .success(primaryData), fallbackResult: .success(fallbackData))
 
         expect(sut, toCompleteWith: .success(primaryData))
+    }
+
+    func test_load_deliversFallbackDataOnPrimaryLoaderFailure() {
+        let fallbackData = Data("Fallback data".utf8)
+
+        let sut = makeSUT(primaryResult: .failure(anyNSError()), fallbackResult: .success(fallbackData))
+
+        expect(sut, toCompleteWith: .success(fallbackData))
     }
 
     // MARK: - Helpers
@@ -80,6 +97,10 @@ final class FeedImageDataLoaderWithFallbackCompositeTests: XCTestCase {
             completion(result)
             return Task()
         }
+    }
+
+    private func anyNSError() -> NSError {
+        return NSError(domain: "any error", code: 0)
     }
 
     private func trackForMemoryLeaks(_ instance: AnyObject, file: StaticString = #file, line: UInt = #line) {
