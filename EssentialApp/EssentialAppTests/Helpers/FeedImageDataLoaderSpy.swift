@@ -32,4 +32,8 @@ final class FeedImageDataLoaderSpy: FeedImageDataLoader {
     func complete(with error: Error, at index: Int = 0) {
         messages[index].completion(.failure(error))
     }
+
+    func complete(with data: Data, at index: Int = 0) {
+        messages[index].completion(.success(data))
+    }
 }
