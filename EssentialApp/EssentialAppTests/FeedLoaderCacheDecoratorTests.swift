@@ -11,7 +11,7 @@ import EssentialApp
 
 final class FeedLoaderCacheDecoratorTests: XCTestCase, FeedLoaderTestCase {
 
-    func test_load_deliversOnLoadedSuccess() {
+    func test_load_deliversOnLoaderSuccess() {
         let feed = uniqueFeed()
         let sut = makeSUT(loaderResult: .success(feed))
 
