@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		902B63B22AC6BC490091A9C4 /* FeedLoaderCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B63B12AC6BC490091A9C4 /* FeedLoaderCacheDecorator.swift */; };
 		902B63B42AC6D7300091A9C4 /* FeedImageDataLoaderCacheDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B63B32AC6D7300091A9C4 /* FeedImageDataLoaderCacheDecoratorTests.swift */; };
+		902B63B62AC839430091A9C4 /* FeedImageDataLoaderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B63B52AC839430091A9C4 /* FeedImageDataLoaderStub.swift */; };
+		902B63B82AC839780091A9C4 /* FeedImageDataLoaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B63B72AC839780091A9C4 /* FeedImageDataLoaderSpy.swift */; };
 		90B6AEC42AC5D1D6006E9C19 /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B6AEC32AC5D1D6006E9C19 /* FeedImageDataLoaderWithFallbackComposite.swift */; };
 		90B6AEC62AC5D22D006E9C19 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B6AEC52AC5D22D006E9C19 /* XCTestCase+MemoryLeakTracking.swift */; };
 		90B6AEC92AC5D2D6006E9C19 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B6AEC82AC5D2D6006E9C19 /* SharedTestHelpers.swift */; };
@@ -58,6 +60,8 @@
 /* Begin PBXFileReference section */
 		902B63B12AC6BC490091A9C4 /* FeedLoaderCacheDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderCacheDecorator.swift; sourceTree = "<group>"; };
 		902B63B32AC6D7300091A9C4 /* FeedImageDataLoaderCacheDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderCacheDecoratorTests.swift; sourceTree = "<group>"; };
+		902B63B52AC839430091A9C4 /* FeedImageDataLoaderStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderStub.swift; sourceTree = "<group>"; };
+		902B63B72AC839780091A9C4 /* FeedImageDataLoaderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderSpy.swift; sourceTree = "<group>"; };
 		90B6AEC32AC5D1D6006E9C19 /* FeedImageDataLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 		90B6AEC52AC5D22D006E9C19 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		90B6AEC82AC5D2D6006E9C19 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 				90B6AEC82AC5D2D6006E9C19 /* SharedTestHelpers.swift */,
 				90B6AECC2AC6B23A006E9C19 /* FeedLoaderStub.swift */,
 				90B6AECE2AC6B30B006E9C19 /* XCTestCase+FeedLoader.swift */,
+				902B63B52AC839430091A9C4 /* FeedImageDataLoaderStub.swift */,
+				902B63B72AC839780091A9C4 /* FeedImageDataLoaderSpy.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -283,12 +289,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				902B63B62AC839430091A9C4 /* FeedImageDataLoaderStub.swift in Sources */,
 				90B6AEC92AC5D2D6006E9C19 /* SharedTestHelpers.swift in Sources */,
 				902B63B42AC6D7300091A9C4 /* FeedImageDataLoaderCacheDecoratorTests.swift in Sources */,
 				90B6AECF2AC6B30B006E9C19 /* XCTestCase+FeedLoader.swift in Sources */,
 				90DEC2D42AC593AF00AEDE50 /* FeedImageDataLoaderWithFallbackCompositeTests.swift in Sources */,
 				90DEC2CB2AC588E200AEDE50 /* FeedLoaderWithFallbackCompositeTests.swift in Sources */,
 				90B6AECB2AC6AFF3006E9C19 /* FeedLoaderCacheDecoratorTests.swift in Sources */,
+				902B63B82AC839780091A9C4 /* FeedImageDataLoaderSpy.swift in Sources */,
 				90B6AECD2AC6B23A006E9C19 /* FeedLoaderStub.swift in Sources */,
 				90B6AEC62AC5D22D006E9C19 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);
