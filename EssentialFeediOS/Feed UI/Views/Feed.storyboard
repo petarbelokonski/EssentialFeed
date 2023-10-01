@@ -70,8 +70,8 @@ Location</string>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wie-8E-L0X">
                                                             <rect key="frame" x="0.0" y="0.0" width="353" height="353"/>
-                                                            <accessibility key="accessibilityConfiguration">
-                                                                <bool key="isElement" value="YES"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="feed-image-view">
+                                                                <bool key="isElement" value="NO"/>
                                                             </accessibility>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9P-rK-jls">
@@ -125,6 +125,7 @@ Location</string>
                                         <constraint firstItem="zSl-RC-Eg3" firstAttribute="top" secondItem="HfQ-EN-OGD" secondAttribute="topMargin" priority="999" constant="6" id="iiy-Ze-jcs"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="feed-image-cell"/>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="70g-j6-dNi" id="DVA-Fh-EMg"/>
                                     <outlet property="feedImageContainer" destination="a0x-lZ-jt8" id="SpT-rk-FR4"/>
