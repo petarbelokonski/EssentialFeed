@@ -22,7 +22,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let url = URL(string: "https://ile-api.essentialdeveloper.com/essential-feed/v1/feed")!
 
-        let session = URLSession(configuration: .ephemeral)
         let remoteClient = makeRemoteClient()
         let remoteFeedLoader = RemoteFeedLoader(url: url, client: remoteClient)
         let remoteImageLoader = RemoteFeedImageDataLoader(client: remoteClient)
@@ -31,6 +30,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .defaultDirectoryURL
             .appendingPathComponent("feed-store.sqlite")
 
+        if CommandLine.arguments.contains("-reset") {
+            try? FileManager.default.removeItem(at: localStoreURL)
+        }
+        
         let localStore = try! CoreDataFeedStore(storeURL: localStoreURL)
         let localFeedLoader = LocalFeedLoader(store: localStore, currentDate: Date.init)
         let localImageLoader = LocalFeedImageDataLoader(store: localStore)
