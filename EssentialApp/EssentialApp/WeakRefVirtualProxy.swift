@@ -5,7 +5,7 @@
 //  Created by Petar Bel on 14.09.23.
 //
 
-import Foundation
+import EssentialFeediOS
 import EssentialFeed
 import UIKit
 
