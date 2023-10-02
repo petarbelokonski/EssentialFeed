@@ -51,6 +51,7 @@
 		90E3D1902ACAB25B00352B78 /* FeedUIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3D18F2ACAB25A00352B78 /* FeedUIIntegrationTests.swift */; };
 		90E3D1922ACABBE000352B78 /* FeedAcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3D1912ACABBE000352B78 /* FeedAcceptanceTests.swift */; };
 		90E3D1942ACAC60800352B78 /* HTTPClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3D1932ACAC60800352B78 /* HTTPClientStub.swift */; };
+		90E3D1962ACAC66700352B78 /* InMemoryFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3D1952ACAC66700352B78 /* InMemoryFeedStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		90E3D18F2ACAB25A00352B78 /* FeedUIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIIntegrationTests.swift; sourceTree = "<group>"; };
 		90E3D1912ACABBE000352B78 /* FeedAcceptanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAcceptanceTests.swift; sourceTree = "<group>"; };
 		90E3D1932ACAC60800352B78 /* HTTPClientStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientStub.swift; sourceTree = "<group>"; };
+		90E3D1952ACAC66700352B78 /* InMemoryFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryFeedStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				902B63B52AC839430091A9C4 /* FeedImageDataLoaderStub.swift */,
 				902B63B72AC839780091A9C4 /* FeedImageDataLoaderSpy.swift */,
 				90E3D1932ACAC60800352B78 /* HTTPClientStub.swift */,
+				90E3D1952ACAC66700352B78 /* InMemoryFeedStore.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				90E3D1892ACAB10B00352B78 /* FeedViewControllerTests+Localization.swift in Sources */,
 				90E3D18E2ACAB10B00352B78 /* FeedImageCell+TestHelpers.swift in Sources */,
 				90E3D18A2ACAB10B00352B78 /* FeedViewController+LoaderSpy.swift in Sources */,
+				90E3D1962ACAC66700352B78 /* InMemoryFeedStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
