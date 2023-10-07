@@ -12,7 +12,7 @@ public protocol FeedImageView {
      associatedtype Image
 
      func display(_ model: FeedImageViewModel<Image>)
- }
+}
 
 public final class FeedImagePresenter<View: FeedImageView, Image> where View.Image == Image {
      private let view: View

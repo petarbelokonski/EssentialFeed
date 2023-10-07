@@ -81,6 +81,7 @@
 		90E3D1BF2AD00C2700352B78 /* FeedLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3D1BE2AD00C2700352B78 /* FeedLoadingViewModel.swift */; };
 		90E3D1C12AD00C8900352B78 /* FeedErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3D1C02AD00C8900352B78 /* FeedErrorViewModel.swift */; };
 		90E3D1C22AD011CB00352B78 /* FeedLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904102F42AB20B8100F1ED2E /* FeedLocalizationTests.swift */; };
+		90E3D1C42AD14C0100352B78 /* FeedImagePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3D1C32AD14C0100352B78 /* FeedImagePresenterTests.swift */; };
 		90ED3FA22A93CC8C0095854F /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ED3FA12A93CC8C0095854F /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift */; };
 		90ED3FA42A93CDB30095854F /* XCTestCase+FailableInsertFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ED3FA32A93CDB30095854F /* XCTestCase+FailableInsertFeedStoreSpecs.swift */; };
 		90ED3FA62A93CEE80095854F /* XCTestCase+FailableDeleteFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ED3FA52A93CEE80095854F /* XCTestCase+FailableDeleteFeedStoreSpecs.swift */; };
@@ -222,6 +223,7 @@
 		90E3D1BC2AD00B8B00352B78 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		90E3D1BE2AD00C2700352B78 /* FeedLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoadingViewModel.swift; sourceTree = "<group>"; };
 		90E3D1C02AD00C8900352B78 /* FeedErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedErrorViewModel.swift; sourceTree = "<group>"; };
+		90E3D1C32AD14C0100352B78 /* FeedImagePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImagePresenterTests.swift; sourceTree = "<group>"; };
 		90ED3FA12A93CC8C0095854F /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FailableRetrieveFeedStoreSpecs.swift"; sourceTree = "<group>"; };
 		90ED3FA32A93CDB30095854F /* XCTestCase+FailableInsertFeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FailableInsertFeedStoreSpecs.swift"; sourceTree = "<group>"; };
 		90ED3FA52A93CEE80095854F /* XCTestCase+FailableDeleteFeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FailableDeleteFeedStoreSpecs.swift"; sourceTree = "<group>"; };
@@ -562,6 +564,7 @@
 			children = (
 				904102F42AB20B8100F1ED2E /* FeedLocalizationTests.swift */,
 				90E3D1AF2AD000BF00352B78 /* FeedPresenterTests.swift */,
+				90E3D1C32AD14C0100352B78 /* FeedImagePresenterTests.swift */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -944,6 +947,7 @@
 				90E3D1C22AD011CB00352B78 /* FeedLocalizationTests.swift in Sources */,
 				90ED3FA62A93CEE80095854F /* XCTestCase+FailableDeleteFeedStoreSpecs.swift in Sources */,
 				90ED3FA22A93CC8C0095854F /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift in Sources */,
+				90E3D1C42AD14C0100352B78 /* FeedImagePresenterTests.swift in Sources */,
 				90F8A5B12A52BB20002791F9 /* LoadFeedFromCacheUseCaseTests.swift in Sources */,
 				90F99CCE2A93C3C9007AE497 /* FeedStoreSpecs.swift in Sources */,
 				9042F4142AC2D52900A7CE5F /* URLProtocolStub.swift in Sources */,
@@ -1083,7 +1087,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1117,7 +1121,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
