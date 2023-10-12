@@ -41,6 +41,7 @@
 		90E3D1922ACABBE000352B78 /* FeedAcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3D1912ACABBE000352B78 /* FeedAcceptanceTests.swift */; };
 		90E3D1942ACAC60800352B78 /* HTTPClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3D1932ACAC60800352B78 /* HTTPClientStub.swift */; };
 		90E3D1962ACAC66700352B78 /* InMemoryFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3D1952ACAC66700352B78 /* InMemoryFeedStore.swift */; };
+		90E59F5C2AD7D6DD000C5084 /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E59F5B2AD7D6DD000C5084 /* CombineHelpers.swift */; };
 		90EB142D2AD417C9000D9E10 /* UIView+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EB142C2AD417C9000D9E10 /* UIView+TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +106,7 @@
 		90E3D1912ACABBE000352B78 /* FeedAcceptanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAcceptanceTests.swift; sourceTree = "<group>"; };
 		90E3D1932ACAC60800352B78 /* HTTPClientStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientStub.swift; sourceTree = "<group>"; };
 		90E3D1952ACAC66700352B78 /* InMemoryFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryFeedStore.swift; sourceTree = "<group>"; };
+		90E59F5B2AD7D6DD000C5084 /* CombineHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHelpers.swift; sourceTree = "<group>"; };
 		90EB142C2AD417C9000D9E10 /* UIView+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TestHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,6 +188,7 @@
 				90E3D1752ACAB0E100352B78 /* FeedViewAdapter.swift */,
 				90E3D1732ACAB0E100352B78 /* FeedLoaderPresentationAdapter.swift */,
 				90E3D1742ACAB0E100352B78 /* FeedImageDataLoaderPresentationAdapter.swift */,
+				90E59F5B2AD7D6DD000C5084 /* CombineHelpers.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			files = (
 				90DEC2972AC566A200AEDE50 /* ViewController.swift in Sources */,
 				90DEC2932AC566A200AEDE50 /* AppDelegate.swift in Sources */,
+				90E59F5C2AD7D6DD000C5084 /* CombineHelpers.swift in Sources */,
 				90DEC2952AC566A200AEDE50 /* SceneDelegate.swift in Sources */,
 				90E3D1772ACAB0E100352B78 /* WeakRefVirtualProxy.swift in Sources */,
 				90E3D1792ACAB0E100352B78 /* FeedImageDataLoaderPresentationAdapter.swift in Sources */,
