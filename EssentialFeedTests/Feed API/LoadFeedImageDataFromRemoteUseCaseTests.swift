@@ -44,36 +44,6 @@ class LoadFeedImageDataFromRemoteUseCaseTests: XCTestCase {
         })
     }
 
-    func test_loadImageDataFromURL_deliversInvalidDataErrorOnNon200HTTPResponse() {
-        let (sut, client) = makeSUT()
-
-        let samples = [199, 201, 300, 400, 500]
-
-        samples.enumerated().forEach { index, code in
-            expect(sut, toCompleteWith: failure(.invalidData), when: {
-                client.complete(withStatusCode: code, data: anyData(), at: index)
-            })
-        }
-    }
-
-    func test_loadImageDataFromURL_deliversInvalidDataErrorOn200HTTPResponseWithEmptyData() {
-        let (sut, client) = makeSUT()
-
-        expect(sut, toCompleteWith: failure(.invalidData), when: {
-            let emptyData = Data()
-            client.complete(withStatusCode: 200, data: emptyData)
-        })
-    }
-
-    func test_loadImageDataFromURL_deliversReceivedNonEmptyDataOn200HTTPResponse() {
-        let (sut, client) = makeSUT()
-        let nonEmptyData = Data("non-empty data".utf8)
-
-        expect(sut, toCompleteWith: .success(nonEmptyData), when: {
-            client.complete(withStatusCode: 200, data: nonEmptyData)
-        })
-    }
-
     func test_cancelLoadImageDataURLTask_cancelsClientURLRequest() {
         let (sut, client) = makeSUT()
         let url = URL(string: "https://a-given-url.com")!
