@@ -69,6 +69,8 @@
 		90D1D3B52AC44C8A005A41BC /* CoreDataFeedStore+FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1D3B42AC44C8A005A41BC /* CoreDataFeedStore+FeedStore.swift */; };
 		90DFB439294CE3DD007EA08C /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DFB438294CE3DD007EA08C /* RemoteFeedLoader.swift */; };
 		90E06F2F2ADA81B600BAAB17 /* ImageComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E06F2E2ADA81B600BAAB17 /* ImageComment.swift */; };
+		90E06F382ADAA20200BAAB17 /* RemoteLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E06F372ADAA20200BAAB17 /* RemoteLoaderTests.swift */; };
+		90E06F3A2ADAA26200BAAB17 /* RemoteLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E06F392ADAA26200BAAB17 /* RemoteLoader.swift */; };
 		90E3D1982ACD868400352B78 /* FeedSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3D1972ACD868400352B78 /* FeedSnapshotTests.swift */; };
 		90E3D1A02ACEB20E00352B78 /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3D19F2ACEB20E00352B78 /* UIImage+TestHelpers.swift */; };
 		90E3D1A22ACEBDB300352B78 /* UIViewController+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3D1A12ACEBDB300352B78 /* UIViewController+Snapshot.swift */; };
@@ -214,6 +216,8 @@
 		90D1D3B42AC44C8A005A41BC /* CoreDataFeedStore+FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFeedStore+FeedStore.swift"; sourceTree = "<group>"; };
 		90DFB438294CE3DD007EA08C /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
 		90E06F2E2ADA81B600BAAB17 /* ImageComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageComment.swift; sourceTree = "<group>"; };
+		90E06F372ADAA20200BAAB17 /* RemoteLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteLoaderTests.swift; sourceTree = "<group>"; };
+		90E06F392ADAA26200BAAB17 /* RemoteLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteLoader.swift; sourceTree = "<group>"; };
 		90E3D1972ACD868400352B78 /* FeedSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSnapshotTests.swift; sourceTree = "<group>"; };
 		90E3D19F2ACEB20E00352B78 /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
 		90E3D1A12ACEBDB300352B78 /* UIViewController+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Snapshot.swift"; sourceTree = "<group>"; };
@@ -553,6 +557,7 @@
 			isa = PBXGroup;
 			children = (
 				909CEA2B294F42BB00D93B87 /* HTTPClient.swift */,
+				90E06F392ADAA26200BAAB17 /* RemoteLoader.swift */,
 			);
 			path = "Shared API";
 			sourceTree = "<group>";
@@ -569,6 +574,7 @@
 			isa = PBXGroup;
 			children = (
 				90E06F332ADA9DE400BAAB17 /* Helpers */,
+				90E06F372ADAA20200BAAB17 /* RemoteLoaderTests.swift */,
 			);
 			path = "Shared API";
 			sourceTree = "<group>";
@@ -965,6 +971,7 @@
 				9005A7412AA7496000391161 /* CoreDataHelpers.swift in Sources */,
 				9099F6812AA73A77007FA927 /* FeedStore.xcdatamodeld in Sources */,
 				902B63BE2AC847C00091A9C4 /* FeedImageDataCache.swift in Sources */,
+				90E06F3A2ADAA26200BAAB17 /* RemoteLoader.swift in Sources */,
 				90E3D1C62AD15CC000352B78 /* FeedImagePresenter.swift in Sources */,
 				9042F4122AC2D48D00A7CE5F /* HTTPURLResponse+StatusCode.swift in Sources */,
 				90E3D1BA2AD00AA300352B78 /* FeedPresenter.swift in Sources */,
@@ -1002,6 +1009,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90E06F382ADAA20200BAAB17 /* RemoteLoaderTests.swift in Sources */,
 				90F8A5BE2A542959002791F9 /* CodableFeedStoreTests.swift in Sources */,
 				90F8A5B82A533A17002791F9 /* FeedCacheTestHelpers.swift in Sources */,
 				9068A1A32ADA779100D41D37 /* LoadImageCommentsFromRemoteUseCaseTests.swift in Sources */,
