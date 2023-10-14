@@ -63,7 +63,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = UINavigationController(rootViewController: feedViewController)
     }
 
-    private func makeRemoteFeedLoaderWithLocalFallback() -> RemoteFeedLoader.Publisher {
+    private func makeRemoteFeedLoaderWithLocalFallback() -> FeedLoader.Publisher {
         remoteFeedLoader
             .loadPublisher()
             .caching(to: localFeedLoader)
@@ -83,3 +83,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
     }
 }
+
+extension RemoteLoader: FeedLoader where Resource == [FeedImage] {}
