@@ -18,7 +18,7 @@ final class LoadResourcePresentationAdapter<Resource, View: ResourceView> {
         self.loader = loader
     }
 
-    private func loadResource() {
+    func loadResource() {
         presenter?.didStartLoading()
 
         cancellable = loader()
@@ -32,12 +32,6 @@ final class LoadResourcePresentationAdapter<Resource, View: ResourceView> {
         } receiveValue: { [weak self] resource in
             self?.presenter?.didFinishLoading(with: resource)
         }
-    }
-}
-
-extension LoadResourcePresentationAdapter: FeedViewControllerDelegate {
-    func didRequestFeedRefresh() {
-        loadResource()
     }
 }
 
