@@ -18,7 +18,7 @@ final class LoadResourcePresentationAdapter<Resource, View: ResourceView> {
         self.loader = loader
     }
 
-    func loadResource() {
+    private func loadResource() {
         presenter?.didStartLoading()
 
         cancellable = loader()
