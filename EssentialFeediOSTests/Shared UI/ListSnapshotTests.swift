@@ -42,7 +42,7 @@ final class ListSnapshotTests: XCTestCase {
         return controller
     }
 
-    private func emptyList() -> [FeedImageCellController] {
+    private func emptyList() -> [CellController] {
         return []
     }
 }
