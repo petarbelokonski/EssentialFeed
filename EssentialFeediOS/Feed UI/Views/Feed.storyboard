@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iWJ-qe-bYj">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,51 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="DAi-z2-IC5" customClass="ErrorView" customModule="EssentialFeediOS" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="34"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0G-iX-hvG">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="34"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <inset key="contentEdgeInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
-                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="hideMessageAnimated" destination="DAi-z2-IC5" eventType="touchUpInside" id="oYh-Kw-NdJ"/>
-                                    </connections>
-                                </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0w6-BA-jPi">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="34"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" red="0.99951404330000004" green="0.41759261489999999" blue="0.4154433012" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstItem="s0G-iX-hvG" firstAttribute="top" secondItem="DAi-z2-IC5" secondAttribute="top" id="36o-E2-ySN"/>
-                                <constraint firstItem="0w6-BA-jPi" firstAttribute="leading" secondItem="s0G-iX-hvG" secondAttribute="leading" id="57w-5T-pUd"/>
-                                <constraint firstItem="0w6-BA-jPi" firstAttribute="top" secondItem="s0G-iX-hvG" secondAttribute="top" id="8zf-wo-kOA"/>
-                                <constraint firstAttribute="trailing" secondItem="s0G-iX-hvG" secondAttribute="trailing" id="SXd-Qy-XZ2"/>
-                                <constraint firstItem="0w6-BA-jPi" firstAttribute="width" secondItem="s0G-iX-hvG" secondAttribute="width" id="TOo-5n-cYd"/>
-                                <constraint firstItem="s0G-iX-hvG" firstAttribute="leading" secondItem="DAi-z2-IC5" secondAttribute="leading" id="Ya0-pY-spW"/>
-                                <constraint firstItem="0w6-BA-jPi" firstAttribute="height" secondItem="s0G-iX-hvG" secondAttribute="height" id="dJM-ae-h4d"/>
-                                <constraint firstAttribute="bottom" secondItem="s0G-iX-hvG" secondAttribute="bottom" id="hFC-iq-NiX"/>
-                            </constraints>
-                            <connections>
-                                <outlet property="label" destination="0w6-BA-jPi" id="iZ9-yt-wPP"/>
-                            </connections>
-                        </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="A2a-v1-VeP">
-                            <rect key="frame" x="0.0" y="692" width="393" height="16"/>
+                            <rect key="frame" x="0.0" y="658" width="393" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="580" id="0cx-ge-OWx" customClass="FeedImageCell" customModule="EssentialFeediOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="84" width="393" height="580"/>
+                                <rect key="frame" x="0.0" y="50" width="393" height="580"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0cx-ge-OWx" id="HfQ-EN-OGD">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="580"/>
@@ -181,9 +144,6 @@ Location</string>
                             <action selector="refresh" destination="iWJ-qe-bYj" eventType="valueChanged" id="sFG-If-uxo"/>
                         </connections>
                     </refreshControl>
-                    <connections>
-                        <outlet property="errorView" destination="DAi-z2-IC5" id="3mp-88-eBf"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IgZ-6J-6Yx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
