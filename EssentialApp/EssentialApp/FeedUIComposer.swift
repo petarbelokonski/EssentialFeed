@@ -39,7 +39,7 @@ private extension ListViewController {
         let bundle = Bundle(for: ListViewController.self)
         let storyboard = UIStoryboard(name: "Feed", bundle: bundle)
         let feedViewController = storyboard.instantiateInitialViewController() as! ListViewController
-        feedViewController.title = FeedPresenter.title
+        feedViewController.title = title
         return feedViewController
     }
 }
