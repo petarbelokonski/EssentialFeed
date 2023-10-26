@@ -27,13 +27,25 @@ extension ListViewController {
         return errorView.message
     }
 
+    func numberOfRows(in section: Int) -> Int {
+        tableView.numberOfSections > section ? tableView.numberOfRows(inSection: section) : 0
+    }
+
     var isShowingLoadingIndicator: Bool {
         refreshControl?.isRefreshing == true
     }
 
     func numberOfRenderedFeedImageViews() -> Int {
-        tableView.numberOfSections == 0 ? 0 :
-            tableView.numberOfRows(inSection: feedImagesSection)
+        numberOfRows(in: feedImagesSection)
+    }
+
+    func cell(row: Int, section: Int) -> UITableViewCell? {
+        guard numberOfRows(in: section) > row else {
+            return nil
+        }
+        let ds = tableView.dataSource
+        let index = IndexPath(row: row, section: section)
+        return ds?.tableView(tableView, cellForRowAt: index)
     }
 
     private var feedImagesSection: Int {
@@ -41,20 +53,14 @@ extension ListViewController {
     }
 
     func feedImageView(at row: Int) -> UITableViewCell? {
-        guard numberOfRenderedFeedImageViews() > row else {
-            return nil
-        }
-
-        let ds = tableView.dataSource
-        let index = IndexPath(row: row, section: feedImagesSection)
-        return ds?.tableView(tableView, cellForRowAt: index)
+        cell(row: row, section: feedImagesSection)
     }
 
 }
 
 extension ListViewController {
     func numberOfRenderedComments() -> Int {
-        tableView.numberOfSections == 0 ? 0 :  tableView.numberOfRows(inSection: commentsSection)
+        numberOfRows(in: commentsSection)
     }
 
     func commentMessage(at row: Int) -> String? {
@@ -70,12 +76,7 @@ extension ListViewController {
     }
 
     private func commentView(at row: Int) -> ImageCommentsCell? {
-        guard numberOfRenderedComments() > row else {
-            return nil
-        }
-        let ds = tableView.dataSource
-        let index = IndexPath(row: row, section: commentsSection)
-        return ds?.tableView(tableView, cellForRowAt: index) as? ImageCommentsCell
+        cell(row: row, section: commentsSection) as? ImageCommentsCell
     }
 
     private var commentsSection: Int {
