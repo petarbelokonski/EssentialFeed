@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		902B63D12AC9AC2C0091A9C4 /* SceneDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B63D02AC9AC2C0091A9C4 /* SceneDelegateTests.swift */; };
+		9086A5892AF2ACFF007D9B13 /* NullStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9086A5882AF2ACFF007D9B13 /* NullStore.swift */; };
 		9087A5F72AE8E998000FAD57 /* CommentsUIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9087A5F62AE8E998000FAD57 /* CommentsUIIntegrationTests.swift */; };
 		9087A5F92AE8EECB000FAD57 /* CommentsUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9087A5F82AE8EECB000FAD57 /* CommentsUIComposer.swift */; };
 		90B6AEC62AC5D22D006E9C19 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B6AEC52AC5D22D006E9C19 /* XCTestCase+MemoryLeakTracking.swift */; };
@@ -69,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		902B63D02AC9AC2C0091A9C4 /* SceneDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegateTests.swift; sourceTree = "<group>"; };
+		9086A5882AF2ACFF007D9B13 /* NullStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullStore.swift; sourceTree = "<group>"; };
 		9087A5F62AE8E998000FAD57 /* CommentsUIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsUIIntegrationTests.swift; sourceTree = "<group>"; };
 		9087A5F82AE8EECB000FAD57 /* CommentsUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsUIComposer.swift; sourceTree = "<group>"; };
 		90B6AEC52AC5D22D006E9C19 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				90E3D1732ACAB0E100352B78 /* LoadResourcePresentationAdapter.swift */,
 				90E59F5B2AD7D6DD000C5084 /* CombineHelpers.swift */,
 				9087A5F82AE8EECB000FAD57 /* CommentsUIComposer.swift */,
+				9086A5882AF2ACFF007D9B13 /* NullStore.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			files = (
 				90DEC2972AC566A200AEDE50 /* ViewController.swift in Sources */,
 				90DEC2932AC566A200AEDE50 /* AppDelegate.swift in Sources */,
+				9086A5892AF2ACFF007D9B13 /* NullStore.swift in Sources */,
 				90E59F5C2AD7D6DD000C5084 /* CombineHelpers.swift in Sources */,
 				90DEC2952AC566A200AEDE50 /* SceneDelegate.swift in Sources */,
 				9087A5F92AE8EECB000FAD57 /* CommentsUIComposer.swift in Sources */,

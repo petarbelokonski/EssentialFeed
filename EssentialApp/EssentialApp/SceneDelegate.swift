@@ -5,6 +5,7 @@
 //  Created by Petar Bel on 28.09.23.
 //
 
+import os
 import UIKit
 import CoreData
 import EssentialFeed
@@ -15,7 +16,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-    let localStoreURL = NSPersistentContainer
+    private lazy var logger = Logger(subsystem: "com.essentialdeveloper.EssentialAppCaseStudy", category: "main")
+
+    private let localStoreURL = NSPersistentContainer
         .defaultDirectoryURL
         .appendingPathComponent("feed-store.sqlite")
 
@@ -24,7 +27,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }()
 
     private lazy var store: FeedStore & FeedImageDataStore = {
-        try! CoreDataFeedStore(storeURL: localStoreURL)
+        do {
+             return try CoreDataFeedStore(storeURL: localStoreURL)
+         } catch {
+             assertionFailure("Failed to instantiate CoreData store with error: \(error.localizedDescription)")
+             logger.fault("Failed to instantiate CoreData store with error: \(error.localizedDescription)")
+             return NullStore()
+         }
     }()
 
     private lazy var localFeedLoader: LocalFeedLoader = {
