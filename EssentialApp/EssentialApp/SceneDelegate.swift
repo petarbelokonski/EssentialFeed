@@ -13,15 +13,20 @@ import EssentialFeediOS
 import Combine
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
     var window: UIWindow?
+
+    private lazy var scheduler: AnyDispatchQueueScheduler = DispatchQueue(
+        label: "com.essentialdeveloper.infra.queue",
+        qos: .userInitiated,
+        attributes: .concurrent
+    ).eraseToAnyScheduler()
 
     private lazy var logger = Logger(subsystem: "com.essentialdeveloper.EssentialAppCaseStudy", category: "main")
 
     private let localStoreURL = NSPersistentContainer
         .defaultDirectoryURL
         .appendingPathComponent("feed-store.sqlite")
-
+    
     private lazy var httpClient: HTTPClient = {
         URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
     }()
@@ -48,10 +53,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         selection: showComments)
     )
 
-    convenience init(httpClient: HTTPClient, store: FeedStore & FeedImageDataStore) {
+    convenience init(httpClient: HTTPClient, store: FeedStore & FeedImageDataStore, scheduler: AnyDispatchQueueScheduler) {
         self.init()
         self.httpClient = httpClient
         self.store = store
+        self.scheduler = scheduler
     }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -121,7 +127,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .eraseToAnyPublisher()
     }
 
-
     private func makePage(items: [FeedImage], last: FeedImage?) -> Paginated<FeedImage> {
         Paginated(items: items, loadMorePublisher: last.map { last in
             { self.makeRemoteLoadMoreLoader(last: last) }
@@ -133,11 +138,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         return localImageLoader
             .loadImageDataPublisher(from: url)
-            .fallback { [httpClient] in
+            .fallback { [httpClient, scheduler] in
                 httpClient
                     .getPublisher(url: url)
                     .tryMap(FeedImageDataMapper.map)
                     .caching(to: localImageLoader, using: url)
+                    .subscribe(on: scheduler)
+                    .eraseToAnyPublisher()
             }
+            .subscribe(on: scheduler)
+            .eraseToAnyPublisher()
     }
 }
