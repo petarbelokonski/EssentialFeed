@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		902B63B62AC839430091A9C4 /* FeedImageDataLoaderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B63B52AC839430091A9C4 /* FeedImageDataLoaderStub.swift */; };
-		902B63B82AC839780091A9C4 /* FeedImageDataLoaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B63B72AC839780091A9C4 /* FeedImageDataLoaderSpy.swift */; };
-		902B63BA2AC83BE50091A9C4 /* XCTestCase+FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B63B92AC83BE50091A9C4 /* XCTestCase+FeedImageDataLoader.swift */; };
 		902B63D12AC9AC2C0091A9C4 /* SceneDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B63D02AC9AC2C0091A9C4 /* SceneDelegateTests.swift */; };
 		9087A5F72AE8E998000FAD57 /* CommentsUIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9087A5F62AE8E998000FAD57 /* CommentsUIIntegrationTests.swift */; };
 		9087A5F92AE8EECB000FAD57 /* CommentsUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9087A5F82AE8EECB000FAD57 /* CommentsUIComposer.swift */; };
@@ -71,9 +68,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		902B63B52AC839430091A9C4 /* FeedImageDataLoaderStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderStub.swift; sourceTree = "<group>"; };
-		902B63B72AC839780091A9C4 /* FeedImageDataLoaderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderSpy.swift; sourceTree = "<group>"; };
-		902B63B92AC83BE50091A9C4 /* XCTestCase+FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedImageDataLoader.swift"; sourceTree = "<group>"; };
 		902B63D02AC9AC2C0091A9C4 /* SceneDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegateTests.swift; sourceTree = "<group>"; };
 		9087A5F62AE8E998000FAD57 /* CommentsUIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsUIIntegrationTests.swift; sourceTree = "<group>"; };
 		9087A5F82AE8EECB000FAD57 /* CommentsUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsUIComposer.swift; sourceTree = "<group>"; };
@@ -143,9 +137,6 @@
 				90E3D17D2ACAB10B00352B78 /* FeedUIIntegrationTests+Assertions.swift */,
 				90B6AEC52AC5D22D006E9C19 /* XCTestCase+MemoryLeakTracking.swift */,
 				90B6AEC82AC5D2D6006E9C19 /* SharedTestHelpers.swift */,
-				902B63B92AC83BE50091A9C4 /* XCTestCase+FeedImageDataLoader.swift */,
-				902B63B52AC839430091A9C4 /* FeedImageDataLoaderStub.swift */,
-				902B63B72AC839780091A9C4 /* FeedImageDataLoaderSpy.swift */,
 				90E3D1932ACAC60800352B78 /* HTTPClientStub.swift */,
 				90E3D1952ACAC66700352B78 /* InMemoryFeedStore.swift */,
 				90EB142C2AD417C9000D9E10 /* UIView+TestHelpers.swift */,
@@ -331,7 +322,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				902B63B62AC839430091A9C4 /* FeedImageDataLoaderStub.swift in Sources */,
 				90E3D1872ACAB10B00352B78 /* UIControl+TestHelpers.swift in Sources */,
 				90B6AEC92AC5D2D6006E9C19 /* SharedTestHelpers.swift in Sources */,
 				90E3D18C2ACAB10B00352B78 /* UIImage+TestHelpers.swift in Sources */,
@@ -341,11 +331,9 @@
 				90E3D18D2ACAB10B00352B78 /* ListViewController+TestHelpers.swift in Sources */,
 				9087A5F72AE8E998000FAD57 /* CommentsUIIntegrationTests.swift in Sources */,
 				90E3D1942ACAC60800352B78 /* HTTPClientStub.swift in Sources */,
-				902B63B82AC839780091A9C4 /* FeedImageDataLoaderSpy.swift in Sources */,
 				90E3D1862ACAB10B00352B78 /* UIRefreshControl+TestHelpers.swift in Sources */,
 				90E3D1882ACAB10B00352B78 /* UIButton+TestHelpers.swift in Sources */,
 				90B6AEC62AC5D22D006E9C19 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
-				902B63BA2AC83BE50091A9C4 /* XCTestCase+FeedImageDataLoader.swift in Sources */,
 				90EB142D2AD417C9000D9E10 /* UIView+TestHelpers.swift in Sources */,
 				902B63D12AC9AC2C0091A9C4 /* SceneDelegateTests.swift in Sources */,
 				90E3D18E2ACAB10B00352B78 /* FeedImageCell+TestHelpers.swift in Sources */,
