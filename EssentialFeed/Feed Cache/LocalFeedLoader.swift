@@ -30,15 +30,16 @@ extension LocalFeedLoader: FeedCache {
 }
 
 extension LocalFeedLoader {
-    public typealias LoadResult = Swift.Result<[FeedImage], Error>
 
-    public func load(completion: @escaping (LoadResult) -> Void) {
-        completion(LoadResult {
-            if let cache = try store.retrieve(), FeedCachePolicy.validate(cache.timestamp, against: currentDate()) {
-                return cache.feed.toModels()
-            }
-            return []
-        })
+    public func load() throws -> [FeedImage] {
+        if let cache = try store.retrieve(), isValid(cache: cache) {
+            return cache.feed.toModels()
+        }
+        return []
+    }
+
+    private func isValid(cache: CachedFeed) -> Bool {
+        FeedCachePolicy.validate(cache.timestamp, against: currentDate())
     }
 }
 
