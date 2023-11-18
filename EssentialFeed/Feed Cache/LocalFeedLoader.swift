@@ -18,13 +18,10 @@ public final class LocalFeedLoader {
 }
 
 extension LocalFeedLoader: FeedCache {
-    public typealias SaveResult = FeedCache.Result
 
-    public func save(_ feed: [FeedImage], completion: @escaping (SaveResult) -> Void) {
-        completion(SaveResult {
-            try store.deleteCacheFeed()
-            try cache(feed)
-        })
+    public func save(_ feed: [FeedImage]) throws {
+        try store.deleteCacheFeed()
+        try cache(feed)
     }
 
     private func cache(_ feed: [FeedImage]) throws {
