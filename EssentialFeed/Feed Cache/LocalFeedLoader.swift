@@ -15,10 +15,13 @@ public final class LocalFeedLoader {
         self.store = store
         self.currentDate = currentDate
     }
+
+    private func isValid(cache: CachedFeed) -> Bool {
+        FeedCachePolicy.validate(cache.timestamp, against: currentDate())
+    }
 }
 
 extension LocalFeedLoader: FeedCache {
-
     public func save(_ feed: [FeedImage]) throws {
         try store.deleteCacheFeed()
         try cache(feed)
@@ -30,16 +33,11 @@ extension LocalFeedLoader: FeedCache {
 }
 
 extension LocalFeedLoader {
-
     public func load() throws -> [FeedImage] {
         if let cache = try store.retrieve(), isValid(cache: cache) {
             return cache.feed.toModels()
         }
         return []
-    }
-
-    private func isValid(cache: CachedFeed) -> Bool {
-        FeedCachePolicy.validate(cache.timestamp, against: currentDate())
     }
 }
 
@@ -48,7 +46,7 @@ extension LocalFeedLoader {
 
     public func validateCache() throws {
         do {
-            if let cache = try store.retrieve(), !FeedCachePolicy.validate(cache.timestamp, against: self.currentDate()) {
+            if let cache = try store.retrieve(), !isValid(cache: cache) {
                 throw InvalidCache()
             }
         } catch {
